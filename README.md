@@ -1,88 +1,115 @@
-# 🏗 Scaffold-ETH 2
+# 🔥 Roast My Wallet
+
+> Built for **Forte Hacks** - A brutally honest AI-powered wallet roaster for Flow EVM
 
 <h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
+  <a href="https://roast-my-wallet-9ze467677-bradtacos-projects.vercel.app">Live Demo</a> |
+  <a href="https://www.hackquest.io/hackathons/Forte-Hacks">Hackathon Submission</a>
 </h4>
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## 🎯 About
 
-⚙️ Built using NextJS, RainbowKit, Foundry/Hardhat, Wagmi, Viem, and Typescript.
+Roast My Wallet is an AI-powered dApp that analyzes your Flow EVM wallet transactions and delivers brutally honest roasts about your trading behavior. Get a degen score (0-100), earn badges based on your trading patterns, and share your roasts on social media.
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+⚙️ Built using NextJS, RainbowKit, Wagmi, Viem, TypeScript, and powered by Google's Gemini AI.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+## ✨ Features
 
-## Requirements
+- 🔥 **AI-Powered Roasts**: Get brutally honest feedback on your trading behavior using Google's Gemini AI
+- 📊 **Degen Score**: Receive a score from 0-100 based on your transaction patterns
+- 🏆 **Badge System**: Earn badges like "Gas Guzzler", "Diamond Hands", "Paper Hands", and more
+- 🌐 **Flow EVM Integration**: Analyzes real transactions on Flow EVM testnet
+- 📱 **Social Sharing**: Share your roasts on social media
+- 🎭 **Demo Mode**: Try it out without connecting a wallet
+
+## 🔗 Hackathon Resources
+
+- **Hackathon**: [Forte Hacks on HackQuest](https://www.hackquest.io/hackathons/Forte-Hacks)
+- **Submit Project**: [Submission Portal](https://www.hackquest.io/hackathons/Forte-Hacks)
+- **Flow EVM Docs**: [Flow EVM Documentation](https://developers.flow.com/evm/about)
+- **Flow Testnet**: [Flow EVM Testnet Explorer](https://evm-testnet.flowscan.io/)
+- **Gemini AI**: [Google Gemini API](https://ai.google.dev/)
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 15 (App Router), React, TypeScript
+- **Web3**: RainbowKit, Wagmi, Viem
+- **Blockchain**: Flow EVM Testnet
+- **AI**: Google Gemini 1.5 Flash
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+
+## 🚀 Quick Start
+
+### Requirements
 
 Before you begin, you need to install the following tools:
 
 - [Node (>= v20.18.3)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
+- [Yarn](https://yarnpkg.com/getting-started/install)
 - [Git](https://git-scm.com/downloads)
 
-## Quickstart
+### Installation
 
-To get started with Scaffold-ETH 2, follow the steps below:
+1. Clone the repository:
 
-1. Install the latest version of Scaffold-ETH 2
-
-```
-npx create-eth@latest
-```
-
-This command will install all the necessary packages and dependencies, so it might take a while.
-
-> [!NOTE]
-> You can also initialize your project with one of our extensions to add specific features or starter-kits. Learn more in our [extensions documentation](https://docs.scaffoldeth.io/extensions/).
-
-2. Run a local network in the first terminal:
-
-```
-yarn chain
+```bash
+git clone <your-repo-url>
+cd scaffold-eth-2
 ```
 
-This command starts a local Ethereum network that runs on your local machine and can be used for testing and development. Learn how to [customize your network configuration](https://docs.scaffoldeth.io/quick-start/environment#1-initialize-a-local-blockchain).
+2. Install dependencies:
 
-3. On a second terminal, deploy the test contract:
-
-```
-yarn deploy
+```bash
+yarn install
 ```
 
-This command deploys a test smart contract to the local network. You can find more information about how to customize your contract and deployment script in our [documentation](https://docs.scaffoldeth.io/quick-start/environment#2-deploy-your-smart-contract).
+3. Set up environment variables:
 
-4. On a third terminal, start your NextJS app:
+Create a `.env` file in `packages/nextjs/` with:
 
 ```
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+4. Start the development server:
+
+```bash
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+Visit your app at: `http://localhost:3000`
 
-**What's next**:
+### Configuration
 
-Visit the [What's next section of our docs](https://docs.scaffoldeth.io/quick-start/environment#whats-next) to learn how to:
+The app is configured to work with Flow EVM testnet by default. You can modify the network settings in `packages/nextjs/scaffold.config.ts`.
 
-- Edit your smart contracts
-- Edit your deployment scripts
-- Customize your frontend
-- Edit the app config
-- Writing and running tests
-- [Setting up external services and API keys](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts#configuration-of-third-party-services-for-production-grade-apps)
+### Testing with Demo Mode
 
-## Documentation
+You can try the app without connecting a wallet using the "Try Demo" button on the homepage.
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn all the technical details and guides of Scaffold-ETH 2.
+## 📖 How It Works
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+1. **Connect Wallet**: Connect your Flow EVM wallet or try the demo mode
+2. **Analyze Transactions**: The app fetches your transaction history from Flow EVM testnet
+3. **AI Analysis**: Gemini AI analyzes your trading patterns, gas usage, and transaction behavior
+4. **Get Roasted**: Receive a brutally honest roast, degen score, and badges
+5. **Share**: Share your results on social media
 
-## Contributing to Scaffold-ETH 2
+## 🏗 Built With Scaffold-ETH 2
 
-We welcome contributions to Scaffold-ETH 2!
+This project is built using [Scaffold-ETH 2](https://scaffoldeth.io), an open-source toolkit for building dApps on Ethereum and EVM-compatible chains.
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+- [Scaffold-ETH 2 Documentation](https://docs.scaffoldeth.io)
+- [Scaffold-ETH 2 GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Built for [Forte Hacks](https://www.hackquest.io/hackathons/Forte-Hacks)
+- Powered by [Flow EVM](https://developers.flow.com/evm/about)
+- AI by [Google Gemini](https://ai.google.dev/)
+- Framework by [Scaffold-ETH 2](https://scaffoldeth.io)
