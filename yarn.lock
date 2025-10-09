@@ -3743,6 +3743,92 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@roast-my-wallet/hardhat@workspace:packages/hardhat":
+  version: 0.0.0-use.local
+  resolution: "@roast-my-wallet/hardhat@workspace:packages/hardhat"
+  dependencies:
+    "@ethersproject/abi": ^5.7.0
+    "@ethersproject/providers": ^5.7.2
+    "@inquirer/password": ^4.0.2
+    "@nomicfoundation/hardhat-chai-matchers": ^2.0.7
+    "@nomicfoundation/hardhat-ethers": ^3.0.8
+    "@nomicfoundation/hardhat-network-helpers": ^1.0.11
+    "@nomicfoundation/hardhat-verify": ^2.0.10
+    "@openzeppelin/contracts": ^5.0.2
+    "@typechain/ethers-v5": ^11.1.2
+    "@typechain/ethers-v6": ^0.5.1
+    "@typechain/hardhat": ^9.1.0
+    "@types/eslint": ^9.6.1
+    "@types/mocha": ^10.0.10
+    "@types/prettier": ^3.0.0
+    "@types/qrcode": ^1.5.5
+    "@typescript-eslint/eslint-plugin": ^8.27.0
+    "@typescript-eslint/parser": ^8.27.0
+    chai: ^4.5.0
+    dotenv: ^16.4.5
+    envfile: ^7.1.0
+    eslint: ^9.23.0
+    eslint-config-prettier: ^10.1.1
+    eslint-plugin-prettier: ^5.2.4
+    ethers: ^6.13.2
+    hardhat: ^2.22.10
+    hardhat-deploy: ^1.0.4
+    hardhat-deploy-ethers: ^0.4.2
+    hardhat-gas-reporter: ^2.2.1
+    prettier: ^3.5.3
+    prettier-plugin-solidity: ^1.4.1
+    qrcode: ^1.5.4
+    solidity-coverage: ^0.8.13
+    ts-node: ^10.9.1
+    typechain: ^8.3.2
+    typescript: ^5.8.2
+  languageName: unknown
+  linkType: soft
+
+"@roast-my-wallet/nextjs@workspace:packages/nextjs":
+  version: 0.0.0-use.local
+  resolution: "@roast-my-wallet/nextjs@workspace:packages/nextjs"
+  dependencies:
+    "@heroicons/react": ^2.1.5
+    "@rainbow-me/rainbowkit": 2.2.8
+    "@tailwindcss/postcss": latest
+    "@tanstack/react-query": ^5.59.15
+    "@trivago/prettier-plugin-sort-imports": ^4.3.0
+    "@types/node": ^18.19.50
+    "@types/react": ^19.0.7
+    "@uniswap/sdk-core": ^5.8.2
+    "@uniswap/v2-sdk": ^4.6.1
+    abitype: 1.0.6
+    bgipfs: ^0.0.12
+    blo: ^1.2.0
+    burner-connector: 0.0.18
+    daisyui: ^5.0.9
+    eslint: ^9.23.0
+    eslint-config-next: ^15.2.3
+    eslint-config-prettier: ^10.1.1
+    eslint-plugin-prettier: ^5.2.4
+    html2canvas: ^1.4.1
+    kubo-rpc-client: ^5.0.2
+    next: ^15.2.3
+    next-nprogress-bar: ^2.3.13
+    next-themes: ^0.3.0
+    postcss: ^8.4.45
+    prettier: ^3.5.3
+    qrcode.react: ^4.0.1
+    react: ^19.0.0
+    react-dom: ^19.0.0
+    react-hot-toast: ^2.4.0
+    tailwindcss: ^4.1.3
+    type-fest: ^4.26.1
+    typescript: ^5.8.2
+    usehooks-ts: ^3.1.0
+    vercel: ^39.1.3
+    viem: 2.34.0
+    wagmi: 2.16.4
+    zustand: ^5.0.0
+  languageName: unknown
+  linkType: soft
+
 "@rollup/pluginutils@npm:^4.0.0":
   version: 4.2.1
   resolution: "@rollup/pluginutils@npm:4.2.1"
@@ -3930,91 +4016,6 @@ __metadata:
   checksum: 96d46420780473d6c6c9700254a0eceec60302f61d7f9d7f29024e90c7acff3e8e40a5ee52dfaf104db539a10462e531996aaf9e69f082b8540b0a25870545fc
   languageName: node
   linkType: hard
-
-"@se-2/hardhat@workspace:packages/hardhat":
-  version: 0.0.0-use.local
-  resolution: "@se-2/hardhat@workspace:packages/hardhat"
-  dependencies:
-    "@ethersproject/abi": ^5.7.0
-    "@ethersproject/providers": ^5.7.2
-    "@inquirer/password": ^4.0.2
-    "@nomicfoundation/hardhat-chai-matchers": ^2.0.7
-    "@nomicfoundation/hardhat-ethers": ^3.0.8
-    "@nomicfoundation/hardhat-network-helpers": ^1.0.11
-    "@nomicfoundation/hardhat-verify": ^2.0.10
-    "@openzeppelin/contracts": ^5.0.2
-    "@typechain/ethers-v5": ^11.1.2
-    "@typechain/ethers-v6": ^0.5.1
-    "@typechain/hardhat": ^9.1.0
-    "@types/eslint": ^9.6.1
-    "@types/mocha": ^10.0.10
-    "@types/prettier": ^3.0.0
-    "@types/qrcode": ^1.5.5
-    "@typescript-eslint/eslint-plugin": ^8.27.0
-    "@typescript-eslint/parser": ^8.27.0
-    chai: ^4.5.0
-    dotenv: ^16.4.5
-    envfile: ^7.1.0
-    eslint: ^9.23.0
-    eslint-config-prettier: ^10.1.1
-    eslint-plugin-prettier: ^5.2.4
-    ethers: ^6.13.2
-    hardhat: ^2.22.10
-    hardhat-deploy: ^1.0.4
-    hardhat-deploy-ethers: ^0.4.2
-    hardhat-gas-reporter: ^2.2.1
-    prettier: ^3.5.3
-    prettier-plugin-solidity: ^1.4.1
-    qrcode: ^1.5.4
-    solidity-coverage: ^0.8.13
-    ts-node: ^10.9.1
-    typechain: ^8.3.2
-    typescript: ^5.8.2
-  languageName: unknown
-  linkType: soft
-
-"@se-2/nextjs@workspace:packages/nextjs":
-  version: 0.0.0-use.local
-  resolution: "@se-2/nextjs@workspace:packages/nextjs"
-  dependencies:
-    "@heroicons/react": ^2.1.5
-    "@rainbow-me/rainbowkit": 2.2.8
-    "@tailwindcss/postcss": latest
-    "@tanstack/react-query": ^5.59.15
-    "@trivago/prettier-plugin-sort-imports": ^4.3.0
-    "@types/node": ^18.19.50
-    "@types/react": ^19.0.7
-    "@uniswap/sdk-core": ^5.8.2
-    "@uniswap/v2-sdk": ^4.6.1
-    abitype: 1.0.6
-    bgipfs: ^0.0.12
-    blo: ^1.2.0
-    burner-connector: 0.0.18
-    daisyui: ^5.0.9
-    eslint: ^9.23.0
-    eslint-config-next: ^15.2.3
-    eslint-config-prettier: ^10.1.1
-    eslint-plugin-prettier: ^5.2.4
-    kubo-rpc-client: ^5.0.2
-    next: ^15.2.3
-    next-nprogress-bar: ^2.3.13
-    next-themes: ^0.3.0
-    postcss: ^8.4.45
-    prettier: ^3.5.3
-    qrcode.react: ^4.0.1
-    react: ^19.0.0
-    react-dom: ^19.0.0
-    react-hot-toast: ^2.4.0
-    tailwindcss: ^4.1.3
-    type-fest: ^4.26.1
-    typescript: ^5.8.2
-    usehooks-ts: ^3.1.0
-    vercel: ^39.1.3
-    viem: 2.34.0
-    wagmi: 2.16.4
-    zustand: ^5.0.0
-  languageName: unknown
-  linkType: soft
 
 "@sec-ant/readable-stream@npm:^0.4.1":
   version: 0.4.1
@@ -7039,6 +7040,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-arraybuffer@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "base64-arraybuffer@npm:1.0.2"
+  checksum: 15e6400d2d028bf18be4ed97702b11418f8f8779fb8c743251c863b726638d52f69571d4cc1843224da7838abef0949c670bde46936663c45ad078e89fee5c62
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.0.2, base64-js@npm:^1.3.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
@@ -8133,6 +8141,15 @@ __metadata:
   version: 0.0.2
   resolution: "crypt@npm:0.0.2"
   checksum: baf4c7bbe05df656ec230018af8cf7dbe8c14b36b98726939cef008d473f6fe7a4fad906cfea4062c93af516f1550a3f43ceb4d6615329612c6511378ed9fe34
+  languageName: node
+  linkType: hard
+
+"css-line-break@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "css-line-break@npm:2.1.0"
+  dependencies:
+    utrie: ^1.0.2
+  checksum: 37b1fe632b03be7a287cd394cef8b5285666343443125c510df9cfb6a4734a2c71e154ec8f7bbff72d7c339e1e5872989b1c52d86162aed27d6cc114725bb4d0
   languageName: node
   linkType: hard
 
@@ -11214,6 +11231,16 @@ __metadata:
   dependencies:
     lru-cache: ^10.0.1
   checksum: b66ef2cacfe8a8dae156e86eddebd0b9e220fbdb6fa866e273982ab9e5b273e6cab317e1f344c5e63e15c0c8774beb268691cd3af5a02e4c3ef574115e8e60bf
+  languageName: node
+  linkType: hard
+
+"html2canvas@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "html2canvas@npm:1.4.1"
+  dependencies:
+    css-line-break: ^2.1.0
+    text-segmentation: ^1.0.3
+  checksum: c134324af57f3262eecf982e436a4843fded3c6cf61954440ffd682527e4dd350e0c2fafd217c0b6f9a455fe345d0c67b4505689796ab160d4ca7c91c3766739
   languageName: node
   linkType: hard
 
@@ -16153,6 +16180,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"roast-my-wallet@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "roast-my-wallet@workspace:."
+  dependencies:
+    husky: ^9.1.6
+    lint-staged: ^15.2.10
+  languageName: unknown
+  linkType: soft
+
 "rspack-resolver@npm:^1.1.0":
   version: 1.2.2
   resolution: "rspack-resolver@npm:1.2.2"
@@ -16319,15 +16355,6 @@ __metadata:
   checksum: b7c7d1a68d6ca946f2fbb0778e0c4ec63c65501b54023b2af7d7e9f48fdb6c6580d6f7675cd53bda5944c5ebc057560d5a6365079752546865defb3b79dea454
   languageName: node
   linkType: hard
-
-"se-2@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "se-2@workspace:."
-  dependencies:
-    husky: ^9.1.6
-    lint-staged: ^15.2.10
-  languageName: unknown
-  linkType: soft
 
 "secp256k1@npm:^4.0.1":
   version: 4.0.3
@@ -17503,6 +17530,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"text-segmentation@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "text-segmentation@npm:1.0.3"
+  dependencies:
+    utrie: ^1.0.2
+  checksum: 2e24632d59567c55ab49ac324815e2f7a8043e63e26b109636322ac3e30692cee8679a448fd5d0f0598a345f407afd0e34ba612e22524cf576d382d84058c013
+  languageName: node
+  linkType: hard
+
 "text-table@npm:~0.2.0":
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
@@ -18349,6 +18385,15 @@ __metadata:
     is-typed-array: ^1.1.3
     which-typed-array: ^1.1.2
   checksum: 705e51f0de5b446f4edec10739752ac25856541e0254ea1e7e45e5b9f9b0cb105bc4bd415736a6210edc68245a7f903bf085ffb08dd7deb8a0e847f60538a38a
+  languageName: node
+  linkType: hard
+
+"utrie@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "utrie@npm:1.0.2"
+  dependencies:
+    base64-arraybuffer: ^1.0.2
+  checksum: c96fbb7d4d8855a154327da0b18e39b7511cc70a7e4bcc3658e24f424bb884312d72b5ba777500b8858e34d365dc6b1a921dc5ca2f0d341182519c6b78e280a5
   languageName: node
   linkType: hard
 

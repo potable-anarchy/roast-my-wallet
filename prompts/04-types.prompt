@@ -1,0 +1,53 @@
+---METADATA---
+TARGET: packages/nextjs/types/wallet.ts
+DESCRIPTION: TypeScript types for wallet analysis and roast data
+DEPENDENCIES: none
+PRIORITY: high
+---END_METADATA---
+
+Create TypeScript types for the wallet analysis and roast functionality.
+
+Requirements:
+Define the following interfaces:
+
+1. **WalletAnalysis** - Contains analyzed wallet data
+   - address: string
+   - totalTransactions: number
+   - totalGasSpent: string (in ETH)
+   - failedTransactions: number
+   - firstTxDate: Date | null
+   - lastTxDate: Date | null
+   - uniqueDays: number
+   - averageGasPrice: string
+
+2. **RoastCard** - The generated roast result
+   - walletAddress: string
+   - roastText: string
+   - severity: 'mild' | 'medium' | 'nuclear'
+   - stats: {
+       gasWasted: string
+       failureRate: number
+       degenScore: number (0-100)
+       transactionCount: number
+     }
+   - timestamp: Date
+
+3. **Badge** - Achievement badges
+   - id: string
+   - name: string
+   - icon: string
+   - description: string
+   - rarity: 'common' | 'rare' | 'legendary'
+
+4. **BlockscoutTransaction** - Raw transaction from Blockscout API
+   - hash: string
+   - from: string
+   - to: string
+   - value: string
+   - gasUsed: string
+   - gasPrice: string
+   - isError: string ('0' | '1')
+   - timeStamp: string
+   - blockNumber: string
+
+Export all types. Use proper TypeScript conventions.

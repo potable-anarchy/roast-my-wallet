@@ -1,0 +1,41 @@
+---METADATA---
+TARGET: packages/nextjs/components/LoadingRoast.tsx
+DESCRIPTION: Fun loading animation while roast is being generated
+DEPENDENCIES: none
+PRIORITY: low
+---END_METADATA---
+
+Create a React component that displays a fun loading animation while the roast is being generated.
+
+Requirements:
+- No external dependencies needed
+- Use Tailwind CSS and daisyUI for styling
+
+Component should display:
+1. Animated spinner or custom loading animation
+2. Rotating funny messages that change every 2 seconds:
+   - "Analyzing your poor life choices..."
+   - "Counting failed transactions..."
+   - "Calculating gas wasted..."
+   - "Finding your worst trades..."
+   - "Preparing the roast..."
+   - "This might hurt a little..."
+   - "Generating brutal honesty..."
+
+Implementation:
+- Use useState for current message
+- Use useEffect with setInterval to rotate messages
+- Clean up interval on unmount
+- Display message with fade-in animation
+- Include loading spinner (use daisyUI loading component)
+
+Style:
+- Center everything vertically and horizontally
+- Use large text for messages
+- Add some personality with emojis or fire icons
+- Smooth transitions between messages
+- Dark theme compatible
+
+Add TypeScript types.
+Keep it simple but entertaining.
+Include JSDoc comment.

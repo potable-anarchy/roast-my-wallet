@@ -1,0 +1,47 @@
+---METADATA---
+TARGET: packages/nextjs/hooks/useRoastGenerator.ts
+DESCRIPTION: React hook for generating AI roasts
+DEPENDENCIES: 04-types.prompt
+PRIORITY: medium
+---END_METADATA---
+
+Create a custom React hook that generates AI roasts by calling the API route.
+
+Requirements:
+- Import useState, useCallback from "react"
+- Import types from "../types/wallet"
+
+Create and export **useRoastGenerator()**
+
+Return object:
+- roast: string | null
+- isGenerating: boolean
+- error: string | null
+- generateRoast: (analysis: WalletAnalysis, address: string) => Promise<void>
+- reset: () => void
+
+Implement **generateRoast** function:
+1. Set isGenerating = true
+2. Clear previous error/roast
+3. Make POST request to /api/roast
+4. Send JSON body: { walletData: analysis, address }
+5. Parse response and extract roast text
+6. Set roast state with result
+7. Handle errors:
+   - Network errors
+   - API errors (429, 500, etc.)
+   - Invalid responses
+8. Set isGenerating = false when done
+
+Implement **reset** function:
+- Clear roast, error states
+- Don't clear isGenerating (let it finish naturally)
+
+Error messages should be user-friendly:
+- "Failed to generate roast. Please try again."
+- "Rate limit exceeded. Wait a minute and try again."
+- "No wallet data to roast."
+
+Use async/await for API calls.
+Add proper TypeScript types.
+Include JSDoc comments with usage examples.

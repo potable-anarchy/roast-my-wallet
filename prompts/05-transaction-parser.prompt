@@ -1,0 +1,44 @@
+---METADATA---
+TARGET: packages/nextjs/utils/transactionParser.ts
+DESCRIPTION: Parse and analyze blockchain transactions
+DEPENDENCIES: 04-types.prompt
+PRIORITY: high
+---END_METADATA---
+
+Create a utility file that parses raw blockchain transactions and generates wallet analysis.
+
+Requirements:
+- Import types from "../types/wallet"
+- Import formatEther from "viem"
+
+Create and export these functions:
+
+1. **parseTransactions(transactions: BlockscoutTransaction[]): WalletAnalysis**
+   - Calculate total transactions
+   - Sum up gas spent (gasUsed * gasPrice) and convert to ETH
+   - Count failed transactions (isError === '1')
+   - Find first and last transaction dates
+   - Calculate unique trading days
+   - Calculate average gas price
+   - Return complete WalletAnalysis object
+
+2. **calculateDegenScore(analysis: WalletAnalysis): number**
+   - Score 0-100 based on:
+     - Failed transaction rate (0-30 points)
+     - Total gas wasted (0-30 points)
+     - Transaction frequency (0-20 points)
+     - Account age (0-20 points)
+   - Higher score = more degen behavior
+   - Return number between 0-100
+
+3. **generateBadges(analysis: WalletAnalysis): Badge[]**
+   - Return array of earned badges based on wallet behavior
+   - Examples:
+     - "Gas Burner" if totalGasSpent > 1 ETH
+     - "Paper Hands" if many transactions in short time
+     - "OG" if account is older than 1 year
+     - "Smooth Brain" if failure rate > 20%
+   - Each badge should have proper id, name, icon (emoji), description, rarity
+
+Handle edge cases (empty transactions, invalid data, etc.) gracefully.
+Add JSDoc comments to all exported functions.

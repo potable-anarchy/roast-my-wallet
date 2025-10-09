@@ -1,0 +1,46 @@
+---METADATA---
+TARGET: packages/nextjs/utils/blockscoutApi.ts
+DESCRIPTION: Fetch transaction data from Blockscout API
+DEPENDENCIES: 04-types.prompt
+PRIORITY: high
+---END_METADATA---
+
+Create a utility to fetch transaction data from the Flow Blockscout API.
+
+Requirements:
+- Import BlockscoutTransaction type from "../types/wallet"
+- Base API URL: https://evm-testnet.flowscan.io/api
+
+Create and export these functions:
+
+1. **fetchTransactions(address: string): Promise<BlockscoutTransaction[]>**
+   - Fetch transactions from Blockscout API
+   - Endpoint: `?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&sort=desc`
+   - Parse response and validate data structure
+   - Return array of transactions (limit to last 100 for MVP)
+   - Throw descriptive errors if:
+     - API returns error
+     - No transactions found
+     - Network error occurs
+
+2. **getCachedTransactions(address: string): BlockscoutTransaction[] | null**
+   - Check localStorage for cached transactions
+   - Cache key: `roast_tx_${address}`
+   - Check if cache is less than 1 hour old
+   - Return cached data if valid, null otherwise
+
+3. **setCachedTransactions(address: string, transactions: BlockscoutTransaction[]): void**
+   - Store transactions in localStorage with timestamp
+   - Include expiry timestamp (1 hour from now)
+   - Handle localStorage errors gracefully
+
+4. **getTransactionsWithCache(address: string): Promise<BlockscoutTransaction[]>**
+   - Main function that combines caching + fetching
+   - Check cache first
+   - If cache valid, return cached data
+   - If cache invalid/missing, fetch from API and cache result
+   - Return transactions
+
+Add proper error handling and TypeScript types.
+Include JSDoc comments.
+Handle rate limiting gracefully (catch 429 errors).

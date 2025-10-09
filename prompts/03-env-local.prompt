@@ -1,0 +1,30 @@
+---METADATA---
+TARGET: packages/nextjs/.env.local
+DESCRIPTION: Create environment variables file
+DEPENDENCIES: none
+PRIORITY: high
+---END_METADATA---
+
+Create a .env.local file with necessary environment variables for the Roast My Wallet app.
+
+Requirements:
+- Include ANTHROPIC_API_KEY with a placeholder
+- Include NEXT_PUBLIC_FLOW_RPC_URL with Flow testnet RPC
+- Add helpful comments explaining each variable
+- Include a note about getting API keys
+
+Content should be:
+```
+# Anthropic Claude API Key
+# Get your key at: https://console.anthropic.com/
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Flow EVM RPC URL (public endpoint)
+NEXT_PUBLIC_FLOW_RPC_URL=https://testnet.evm.nodes.onflow.org
+
+# Optional: WalletConnect Project ID (if using WalletConnect)
+# Get your project ID at: https://cloud.walletconnect.com
+# NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=your_project_id_here
+```
+
+Create this file if it doesn't exist. If it exists, append these variables (avoiding duplicates).

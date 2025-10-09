@@ -1,0 +1,52 @@
+---METADATA---
+TARGET: packages/nextjs/components/RoastCard.tsx
+DESCRIPTION: Component to display the roast card
+DEPENDENCIES: 04-types.prompt
+PRIORITY: medium
+---END_METADATA---
+
+Create a React component that displays a wallet roast in a shareable card format.
+
+Requirements:
+- Import React from "react"
+- Import Address from "~~/components/scaffold-eth"
+- Import types from "../types/wallet"
+
+Props:
+- walletAddress: string
+- roastText: string
+- degenScore: number
+- stats: { gasWasted: string; failureRate: number; transactionCount: number }
+- badges: Badge[]
+- onShare?: () => void
+- onDownload?: () => void
+- onRoastAgain?: () => void
+
+Layout (use Tailwind + daisyUI):
+1. Card container with dark background and border
+2. Header: "🔥 ROAST MY WALLET 🔥" centered
+3. Address display using <Address> component with format="short"
+4. Roast text in large, readable font (bg-base-200 rounded box)
+5. Stats section with 4 metrics in grid:
+   - 💸 Gas Wasted: {gasWasted} ETH
+   - 📉 Failure Rate: {failureRate}%
+   - 📊 Transactions: {transactionCount}
+   - 🤡 Degen Score: {degenScore}/100
+6. Badges section showing earned badges with icons
+7. Action buttons row:
+   - Share button (if onShare provided)
+   - Download button (if onDownload provided)
+   - "Roast Again" button (if onRoastAgain provided)
+
+Style requirements:
+- Use daisyUI card component
+- Dark theme with accent colors
+- Responsive design (mobile-first)
+- Add id="roast-card" to main container (for html2canvas)
+- Use gradients for visual interest
+- Badge icons should be displayed as emojis
+- Buttons should use daisyUI btn classes
+
+Add hover effects and animations for polish.
+Component should be fully typed with TypeScript.
+Include JSDoc comment explaining usage.

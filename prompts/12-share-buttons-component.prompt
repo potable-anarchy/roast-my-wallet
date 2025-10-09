@@ -1,0 +1,54 @@
+---METADATA---
+TARGET: packages/nextjs/components/ShareButtons.tsx
+DESCRIPTION: Component with share and download functionality
+DEPENDENCIES: none
+PRIORITY: medium
+---END_METADATA---
+
+Create a React component that handles sharing roast cards to Twitter and downloading as image.
+
+Requirements:
+- Import html2canvas from "html2canvas"
+- Use Tailwind CSS and daisyUI for styling
+
+Props:
+- degenScore: number
+- onDownload?: () => void (callback after download completes)
+
+Create these functions:
+
+1. **downloadCard()**
+   - Use html2canvas to capture element with id="roast-card"
+   - Options: backgroundColor: '#000', scale: 2
+   - Convert canvas to PNG blob
+   - Create download link with filename: "roast-my-wallet.png"
+   - Trigger download
+   - Call onDownload callback if provided
+   - Handle errors gracefully (show toast/alert)
+
+2. **shareToTwitter()**
+   - Generate tweet text:
+     ```
+     I got roasted for my on-chain history 🔥
+     
+     Degen Score: {degenScore}/100
+     
+     Get roasted: roastmywallet.xyz
+     
+     #RoastMyWallet #FlowBlockchain
+     ```
+   - Open Twitter intent URL with encoded tweet text
+   - Opens in new window/tab
+
+Component UI:
+- Two buttons side by side
+- "Download" button with download icon
+- "Share on Twitter" button with Twitter icon
+- Use daisyUI button styles (btn btn-primary, btn btn-secondary)
+- Responsive layout (stack on mobile)
+- Loading state while html2canvas processes
+- Success feedback after download
+
+Add TypeScript types for all functions.
+Handle edge cases (element not found, canvas errors).
+Include JSDoc comments.

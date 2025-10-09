@@ -1,0 +1,44 @@
+---METADATA---
+TARGET: packages/nextjs/hooks/useWalletAnalysis.ts
+DESCRIPTION: React hook for analyzing wallet transactions
+DEPENDENCIES: 04-types.prompt, 05-transaction-parser.prompt, 06-blockscout-api.prompt
+PRIORITY: medium
+---END_METADATA---
+
+Create a custom React hook that fetches and analyzes wallet transactions.
+
+Requirements:
+- Import useState, useEffect from "react"
+- Import types from "../types/wallet"
+- Import getTransactionsWithCache from "../utils/blockscoutApi"
+- Import parseTransactions, calculateDegenScore, generateBadges from "../utils/transactionParser"
+
+Create and export **useWalletAnalysis(address: string | undefined)**
+
+Return object:
+- analysis: WalletAnalysis | null
+- degenScore: number | null
+- badges: Badge[]
+- isLoading: boolean
+- error: string | null
+- refetch: () => void
+
+Behavior:
+1. Start with loading = true when address provided
+2. Fetch transactions using getTransactionsWithCache
+3. Parse transactions using parseTransactions
+4. Calculate degen score using calculateDegenScore
+5. Generate badges using generateBadges
+6. Handle errors gracefully (set error state, stop loading)
+7. Provide refetch function to manually reload data
+8. Clear data when address becomes undefined
+9. Use useEffect to trigger fetch when address changes
+
+Edge cases to handle:
+- No address provided (don't fetch)
+- Empty wallet (no transactions)
+- API errors (set error message)
+- Invalid address format (validate before fetching)
+
+Add TypeScript types for all parameters and return values.
+Include JSDoc comments explaining usage.

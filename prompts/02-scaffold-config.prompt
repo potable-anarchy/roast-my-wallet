@@ -1,0 +1,27 @@
+---METADATA---
+TARGET: packages/nextjs/scaffold.config.ts
+DESCRIPTION: Update scaffold config to use Flow EVM testnet
+DEPENDENCIES: 01-custom-chains.prompt
+PRIORITY: high
+---END_METADATA---
+
+Update the existing scaffold.config.ts file to use Flow EVM testnet as the target network.
+
+Requirements:
+- Import `flowTestnet` from "./utils/customChains"
+- Update the `targetNetworks` array to include only `flowTestnet`
+- Keep all other configuration options as they are
+- Maintain proper TypeScript types with `as const satisfies ScaffoldConfig`
+
+Example structure:
+```typescript
+import { flowTestnet } from "./utils/customChains";
+
+const scaffoldConfig = {
+  targetNetworks: [flowTestnet],
+  pollingInterval: 30000,
+  // ... other existing config
+} as const satisfies ScaffoldConfig;
+```
+
+DO NOT remove any existing configuration options. Only update the targetNetworks.

@@ -1,0 +1,70 @@
+---METADATA---
+TARGET: packages/nextjs/app/page.tsx
+DESCRIPTION: Main landing page that orchestrates the entire roast flow
+DEPENDENCIES: 08-use-wallet-analysis.prompt, 09-use-roast-generator.prompt, 10-roast-card-component.prompt, 11-loading-roast-component.prompt, 12-share-buttons-component.prompt
+PRIORITY: high
+---END_METADATA---
+
+Create the main page component that orchestrates the wallet roasting experience.
+
+Requirements:
+- Use "use client" directive (client component)
+- Import useAccount from "wagmi"
+- Import RainbowKitCustomConnectButton from "~~/components/scaffold-eth"
+- Import custom hooks: useWalletAnalysis, useRoastGenerator
+- Import components: RoastCard, LoadingRoast, ShareButtons
+
+State machine:
+1. INITIAL - Show landing page with connect button
+2. CONNECTED - Show "Roast My Wallet" button
+3. ANALYZING - Show loading while fetching transactions
+4. GENERATING - Show loading while AI generates roast
+5. DISPLAYING - Show RoastCard with results
+
+Page Layout:
+
+**Header Section:**
+- Title: "🔥 ROAST MY WALLET 🔥"
+- Subtitle: "Turn your cringe on-chain history into shareable entertainment"
+- Connect button (if not connected)
+
+**Initial State:**
+- Hero section with example roast cards (optional for MVP)
+- Big "Connect Wallet" button
+- Brief explanation
+
+**Connected State:**
+- Show connected address
+- Big "Roast My Wallet" button
+- Loading indicator while analyzing
+
+**Roast Display State:**
+- RoastCard component with all data
+- ShareButtons component below
+- "Roast Again" button to regenerate
+
+**Error Handling:**
+- Show friendly error messages
+- Provide retry button
+- Handle cases:
+  - No transactions found
+  - API errors
+  - Network errors
+
+Styling:
+- Full-screen layout with gradient background
+- Center content vertically and horizontally
+- Use Tailwind + daisyUI components
+- Responsive design
+- Dark theme
+- Smooth transitions between states
+
+Flow Logic:
+1. User connects wallet → auto-fetch transactions
+2. User clicks "Roast My Wallet" → generate roast
+3. Display results with share options
+4. "Roast Again" clears and restarts
+
+Add proper TypeScript types.
+Include loading states and error boundaries.
+Make it fun and engaging!

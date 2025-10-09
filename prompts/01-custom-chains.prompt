@@ -1,0 +1,27 @@
+---METADATA---
+TARGET: packages/nextjs/utils/customChains.ts
+DESCRIPTION: Define Flow EVM chain configurations for mainnet and testnet
+DEPENDENCIES: none
+PRIORITY: high
+---END_METADATA---
+
+Create a TypeScript file that defines custom Flow EVM chain configurations using viem's `defineChain` function.
+
+Requirements:
+- Import `defineChain` from "viem"
+- Export `flowMainnet` chain with:
+  - id: 747
+  - name: "Flow EVM Mainnet"
+  - nativeCurrency: { name: "Flow", symbol: "FLOW", decimals: 18 }
+  - rpcUrls.default.http: ["https://mainnet.evm.nodes.onflow.org"]
+  - blockExplorers.default: { name: "Flowscan", url: "https://evm.flowscan.io" }
+
+- Export `flowTestnet` chain with:
+  - id: 545
+  - name: "Flow EVM Testnet"
+  - nativeCurrency: { name: "Flow", symbol: "FLOW", decimals: 18 }
+  - rpcUrls.default.http: ["https://testnet.evm.nodes.onflow.org"]
+  - blockExplorers.default: { name: "Flowscan Testnet", url: "https://evm-testnet.flowscan.io" }
+  - testnet: true
+
+The file should be properly typed and follow Scaffold-ETH 2 conventions.

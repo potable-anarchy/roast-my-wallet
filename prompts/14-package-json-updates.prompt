@@ -1,0 +1,25 @@
+---METADATA---
+TARGET: packages/nextjs/package.json
+DESCRIPTION: Add required dependencies to package.json
+DEPENDENCIES: none
+PRIORITY: high
+---END_METADATA---
+
+Update the package.json file to include the required dependencies for the Roast My Wallet app.
+
+Requirements:
+Add these dependencies to the "dependencies" section:
+- @anthropic-ai/sdk: "^0.27.0" (or latest)
+- html2canvas: "^1.4.1" (or latest)
+
+Do NOT remove any existing dependencies.
+Maintain proper JSON formatting.
+Keep the file structure intact.
+
+After updating, the user should run:
+```bash
+cd packages/nextjs
+yarn install
+```
+
+Note: If these packages already exist, ensure versions are up to date.

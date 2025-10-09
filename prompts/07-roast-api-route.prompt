@@ -1,0 +1,52 @@
+---METADATA---
+TARGET: packages/nextjs/app/api/roast/route.ts
+DESCRIPTION: API route for generating AI roasts using Claude
+DEPENDENCIES: 04-types.prompt
+PRIORITY: high
+---END_METADATA---
+
+Create a Next.js API route that generates wallet roasts using Claude API.
+
+Requirements:
+- Import NextResponse from "next/server"
+- Import Anthropic from "@anthropic-ai/sdk"
+- Import WalletAnalysis type from "../../../types/wallet"
+
+Implement rate limiting:
+- Use in-memory Map to track requests per wallet address
+- Limit: 3 requests per minute per address
+- Return 429 error if rate limit exceeded
+
+Create **POST** handler that:
+1. Accepts JSON body with: { walletData: WalletAnalysis, address: string }
+2. Checks rate limit for address
+3. Initializes Anthropic client with process.env.ANTHROPIC_API_KEY
+4. Calls Claude API:
+   - Model: "claude-3-5-sonnet-20241022"
+   - Max tokens: 500
+   - Build prompt using buildRoastPrompt() function
+5. Extracts text from response
+6. Returns JSON: { roast: string }
+
+Create **buildRoastPrompt(data: WalletAnalysis): string**
+- Generate prompt that asks Claude to roast the wallet
+- Include wallet stats in prompt
+- Instructions:
+  - Write 80-100 word roast
+  - Be brutally honest but funny
+  - Use crypto slang (NGMI, rekt, ape, etc.)
+  - End with unexpected motivation
+  - No asterisks or emojis, just pure text
+
+Create **generateFallbackRoast(data: WalletAnalysis): string**
+- Return template roast when API fails
+- Use wallet stats to make it semi-personalized
+- Should still be funny
+
+Add proper error handling:
+- Catch API errors and return fallback roast
+- Log errors to console
+- Return 500 status on critical errors
+
+Include TypeScript types for all functions.
+Add JSDoc comments.
